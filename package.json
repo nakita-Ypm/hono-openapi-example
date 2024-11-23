@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "fmt": "pnpm biome format --write ./"
+    "fmt": "pnpm biome format --write ./",
+    "test": "vitest run"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
