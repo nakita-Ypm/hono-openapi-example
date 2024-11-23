@@ -11,8 +11,8 @@ const generatePostDatas = (count: number): Post[] => {
   }))
 }
 
-// buildCreatePostParams
-export const buildCreatePostParamsTestCases: [string, Prisma.PostCreateArgs][] = generatePostDatas(100).map((i) => [
+// buildPostPostsParams
+export const buildbuildPostPostsParamsTestCases: [string, Prisma.PostCreateArgs][] = generatePostDatas(100).map((i) => [
   i.post,
   {
     data: {
@@ -21,22 +21,12 @@ export const buildCreatePostParamsTestCases: [string, Prisma.PostCreateArgs][] =
   },
 ])
 
-// buildGetPostParams
-export const buildGetPostParamsTestCases: [number, number, Prisma.PostFindManyArgs][] = [
+// buildGetPostsParams
+export const buildGetPostsParamsTestCases: [number, number, Prisma.PostFindManyArgs][] = [
   [10, 0, { skip: 0, take: 10, orderBy: { createdAt: 'desc' } }],
   [10, 10, { skip: 10, take: 10, orderBy: { createdAt: 'desc' } }],
   [10, 20, { skip: 20, take: 10, orderBy: { createdAt: 'desc' } }],
 ]
-
-// buildDeletePostParams
-export const buildDeletePostParamsTestCases: [string, Prisma.PostDeleteArgs][] = generatePostDatas(100).map((i) => [
-  i.id,
-  {
-    where: {
-      id: i.id,
-    },
-  },
-])
 
 // buildPutPostParams
 export const buildPutPostParamsTestCases: [string, string, Prisma.PostUpdateArgs][] = generatePostDatas(100).map(
@@ -53,6 +43,16 @@ export const buildPutPostParamsTestCases: [string, string, Prisma.PostUpdateArgs
     },
   ],
 )
+
+// buildDeletePostsId
+export const buildDeletePostsIdTestCases: [string, Prisma.PostDeleteArgs][] = generatePostDatas(100).map((i) => [
+  i.id,
+  {
+    where: {
+      id: i.id,
+    },
+  },
+])
 
 // convertNumberQueryParams
 const queryValidDatas: QueryValid[] = [

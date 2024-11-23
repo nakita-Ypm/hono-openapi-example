@@ -7,12 +7,11 @@ export type QueryValid = {
 
 export class PostDomain {
   /**
-   * buildCreatePostParams
-   * build Create Post Params
+   * buildPostPostsParams
    * @param post
    * @returns Prisma.PostCreateArgs
    */
-  static buildCreatePostParams(post: string): Prisma.PostCreateArgs {
+  static buildPostPostsParams(post: string): Prisma.PostCreateArgs {
     return {
       data: {
         post,
@@ -21,13 +20,12 @@ export class PostDomain {
   }
 
   /**
-   * buildGetPostParams
-   * build Get Post Params
+   * buildGetPostsParams
    * @param limit
    * @param offset
    * @returns Prisma.PostFindManyArgs
    */
-  static buildGetPostParams(limit: number, offset: number): Prisma.PostFindManyArgs {
+  static buildGetPostsParams(limit: number, offset: number): Prisma.PostFindManyArgs {
     return {
       skip: offset,
       take: limit,
@@ -38,22 +36,7 @@ export class PostDomain {
   }
 
   /**
-   * buildDeletePostParams
-   * build Delete Post Params
-   * @param id
-   * @returns Prisma.PostDeleteArgs
-   */
-  static buildDeletePostParams(id: string): Prisma.PostDeleteArgs {
-    return {
-      where: {
-        id,
-      },
-    }
-  }
-
-  /**
    * buildPutPostParams
-   * build Put Post Params
    * @param id
    * @param post
    * @returns Prisma.PostUpdateArgs
@@ -70,8 +53,20 @@ export class PostDomain {
   }
 
   /**
+   * buildDeletePostsId
+   * @param id
+   * @returns Prisma.PostDeleteArgs
+   */
+  static buildDeletePostsId(id: string): Prisma.PostDeleteArgs {
+    return {
+      where: {
+        id,
+      },
+    }
+  }
+
+  /**
    * convertNumberQueryParams
-   * convert Number Query Params
    * @param page
    * @param rows
    * @returns { page: number; rows: number }

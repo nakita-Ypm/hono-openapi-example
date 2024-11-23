@@ -1,32 +1,31 @@
 import { describe, expect, it } from 'vitest'
 import {
-  buildCreatePostParamsTestCases,
-  buildDeletePostParamsTestCases,
-  buildGetPostParamsTestCases,
+  buildbuildPostPostsParamsTestCases,
   buildPutPostParamsTestCases,
+  buildDeletePostsIdTestCases,
   convertNumberQueryParamsTestCases,
+  buildGetPostsParamsTestCases,
 } from '../data/post'
 import { PostDomain } from '../post_domain'
 
 describe('PostDomain Test', () => {
-  // buildCreatePostParams
-  it.concurrent.each(buildCreatePostParamsTestCases)('buildCreatePostParams(%s) -> %j', (post, expected) => {
-    const input = PostDomain.buildCreatePostParams(post)
+  // buildPostPostsParams
+  it.concurrent.each(buildbuildPostPostsParamsTestCases)('buildPostPostsParams("%s") -> %j', (post, expected) => {
+    const input = PostDomain.buildPostPostsParams(post)
     expect(input).toEqual(expected)
   })
-  // buildGetPostParams
-  it.concurrent.each(buildGetPostParamsTestCases)('buildGetPostParams(%d, %d) -> %j', (limit, offset, expected) => {
-    const input = PostDomain.buildGetPostParams(limit, offset)
-    expect(input).toEqual(expected)
-  })
-  //   buildDeletePostParams
-  it.concurrent.each(buildDeletePostParamsTestCases)('buildDeletePostParams(%s) -> %j', (id, expected) => {
-    const input = PostDomain.buildDeletePostParams(id)
+  it.concurrent.each(buildGetPostsParamsTestCases)('buildGetPostsParams("%s", "%s") -> %j', (limit, offset, expected) => {
+    const input = PostDomain.buildGetPostsParams(limit, offset)
     expect(input).toEqual(expected)
   })
   // buildPutPostParams
-  it.concurrent.each(buildPutPostParamsTestCases)('buildPutPostParams(%s) -> %j', (id, post, expected) => {
+  it.concurrent.each(buildPutPostParamsTestCases)('buildPutPostParams("%s") -> %j', (id, post, expected) => {
     const input = PostDomain.buildPutPostParams(id, post)
+    expect(input).toEqual(expected)
+  })
+  // buildDeletePostParams
+  it.concurrent.each(buildDeletePostsIdTestCases)('buildDeletePostParams("%s") -> %j', (id, expected) => {
+    const input = PostDomain.buildDeletePostsId(id)
     expect(input).toEqual(expected)
   })
   // convertNumberQueryParams

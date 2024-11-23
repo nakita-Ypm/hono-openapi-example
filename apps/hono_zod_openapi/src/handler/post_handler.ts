@@ -7,7 +7,7 @@ import { PostDomain } from '@packages/domain'
 export const postPostsHandler: RouteHandler<typeof postPosts> = async (c) => {
   const valid = c.req.valid('json')
   const req = valid.post
-  await PostService.createPost(req)
+  await PostService.postPosts(req)
   return c.json({ message: 'Created' }, 201)
 }
 
@@ -28,13 +28,13 @@ export const putPostsIdHandler: RouteHandler<typeof putPostsId> = async (c) => {
   const id = param_valid.id
   const json_valid = c.req.valid('json')
   const { post } = json_valid
-  await PostService.putPost(id, post)
+  await PostService.putPostsId(id, post)
   return new Response(null, { status: 204 })
 }
 
 export const deletePostsIdHandler: RouteHandler<typeof deletePostsId> = async (c) => {
   const valid = c.req.valid('param')
   const id = valid.id
-  await PostService.deletePost(id)
+  await PostService.deletePostsId(id)
   return new Response(null, { status: 204 })
 }
