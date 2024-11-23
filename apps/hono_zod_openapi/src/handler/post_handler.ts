@@ -1,5 +1,5 @@
 import { type RouteHandler } from '@hono/zod-openapi'
-import { deletePostsId, getPosts, postPosts, putPostsId } from '@packages/hono-rpc'
+import { postPosts, getPosts, putPostsId, deletePostsId } from '@packages/hono-rpc'
 import { Post } from '@packages/prisma'
 import { PostService } from '@packages/service'
 import { PostDomain } from '@packages/domain'
