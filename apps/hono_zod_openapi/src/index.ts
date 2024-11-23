@@ -4,7 +4,7 @@ import { OpenAPIHono } from '@hono/zod-openapi'
 const app = new OpenAPIHono()
 
 app.get('/', (c) => {
-  return c.json({ message: 'Hono Zod OpenAPI🔥' })
+  return c.json({ message: 'Hono🔥' })
 })
 
 const port = 3000
