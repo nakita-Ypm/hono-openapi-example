@@ -1,6 +1,9 @@
 {
+  "name": "hono_openapi_example",
+  "private": true,
   "scripts": {
     "fmt": "pnpm biome format --write ./",
+    "migrate": "rm -rf packages/prisma/dev.db && pnpm -F @packages/prisma migrate",
     "test": "vitest run"
   },
   "devDependencies": {

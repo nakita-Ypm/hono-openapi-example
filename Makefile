@@ -4,15 +4,3 @@ deps:
 	
 run:
 	pnpm -F @apps/hono_zod_openapi dev
-
-# Prisma
-dbrm:
-	rm -rf packages/prisma/migrations
-	rm -rf packages/prisma/dev.db
-
-migrate:
-	rm -rf packages/prisma/dev.db
-	pnpm -F @packages/prisma migrate
-
-generate:
-	pnpm -F @packages/prisma generate
