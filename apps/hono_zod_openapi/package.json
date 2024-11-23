@@ -5,9 +5,15 @@
     "dev": "tsx watch src/index.ts"
   },
   "dependencies": {
-    "@hono/node-server": "^1.13.7"
+    "@hono/node-server": "^1.13.7",
+    "@hono/zod-openapi": "^0.18.0",
+    "@packages/domain": "workspace:*",
+    "@packages/prisma": "workspace:*",
+    "@packages/service": "workspace:*",
+    "@packages/hono-rpc": "workspace:*"
   },
   "devDependencies": {
+    "@hono/swagger-ui": "^0.4.1",
     "@types/node": "^20.11.17",
     "tsx": "^4.7.1"
   }

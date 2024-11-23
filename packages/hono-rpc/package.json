@@ -1,0 +1,8 @@
+{
+  "name": "@packages/hono-rpc",
+  "private": true,
+  "main": "src/index.ts",
+  "dependencies": {
+    "@hono/zod-openapi": "^0.18.0"
+  }
+}
