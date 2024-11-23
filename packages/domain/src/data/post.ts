@@ -1,28 +1,6 @@
 import { Post, Prisma } from '@packages/prisma'
 import { QueryValid } from '../post_domain'
 
-// Sample Data
-const postDatas: Post[] = [
-  {
-    id: 'post_id_1',
-    post: 'Content 1',
-    createdAt: new Date('2024-01-01'),
-    updatedAt: new Date('2024-01-01'),
-  },
-  {
-    id: 'post_id_2',
-    post: 'post 2',
-    createdAt: new Date('2024-01-01'),
-    updatedAt: new Date('2024-01-01'),
-  },
-  {
-    id: 'post_id_3',
-    post: 'post 3',
-    createdAt: new Date('2024-01-01'),
-    updatedAt: new Date('2024-01-01'),
-  },
-]
-
 // generatePostDatas
 const generatePostDatas = (count: number): Post[] => {
   return Array.from({ length: count }, (_, i) => ({

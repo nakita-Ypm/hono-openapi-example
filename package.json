@@ -3,7 +3,8 @@
     "fmt": "pnpm biome format --write ./"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4"
+    "@biomejs/biome": "^1.9.4",
+    "vitest": "^2.1.4"
   },
   "dependencies": {
     "@hono/zod-openapi": "^0.18.0"
