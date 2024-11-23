@@ -14,10 +14,13 @@ describe('PostDomain Test', () => {
     const input = PostDomain.buildPostPostsParams(post)
     expect(input).toEqual(expected)
   })
-  it.concurrent.each(buildGetPostsParamsTestCases)('buildGetPostsParams("%s", "%s") -> %j', (limit, offset, expected) => {
-    const input = PostDomain.buildGetPostsParams(limit, offset)
-    expect(input).toEqual(expected)
-  })
+  it.concurrent.each(buildGetPostsParamsTestCases)(
+    'buildGetPostsParams("%s", "%s") -> %j',
+    (limit, offset, expected) => {
+      const input = PostDomain.buildGetPostsParams(limit, offset)
+      expect(input).toEqual(expected)
+    },
+  )
   // buildPutPostParams
   it.concurrent.each(buildPutPostParamsTestCases)('buildPutPostParams("%s") -> %j', (id, post, expected) => {
     const input = PostDomain.buildPutPostParams(id, post)

@@ -1,4 +1,4 @@
-import { Post, prisma } from '@packages/prisma'
+import { prisma, Post } from '@packages/prisma'
 import { beforeEach, describe, expect, it } from 'vitest'
 import { randomUUID } from 'crypto'
 import { testClient } from 'hono/testing'
