@@ -4,5 +4,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4"
+  },
+  "dependencies": {
+    "@hono/zod-openapi": "^0.18.0"
   }
 }
