@@ -1,4 +1,4 @@
-# Hono Openapi Example🔥
+# Hono OpenAPI Example🔥
 
 &emsp;Generate RPC code from OpenAPI definition
 
