@@ -6,7 +6,7 @@
 
 &emsp;Please wait until we are at a level where we can publish.
 
-![demo](webp/demo.webp)
+![demo](gif/demo.gif)
 
 ## Dependency
 ```sh
